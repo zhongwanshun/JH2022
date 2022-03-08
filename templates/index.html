@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>炫酷登录页面</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <span style="white-space:pre"></span>
+    <link rel="icon" href="../static/image/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="registermain">
+        <div class="register-title">
+            <span>用户注册</span>
+        </div>
+        <div id="panel"></div>
+
+        <div class="register-con" style="position: relative;">
+            <div class="register-user">
+                <input type="text" name="usernem" placeholder="用户名" autocomplete="on" value="" id="user">
+                <img src="../static/image/user_icon_copy.png" width="30px" alt="图片未加载成功" class="icno">
+            </div>
+
+            <div class="register-phonenum">
+                <input type="tel" name="ipnum" placeholder="手机号码" autocomplete="off" value="" id="ipnum">
+                <img src="../static/image/iPhone 128x128.png" width="30px" alt="图片未加载成功" class="icno">
+            </div>
+
+            <div class="register-pwd">
+                <input type="password" name="pwd" placeholder="密码" autocomplete="off" value="" id="pwd" >
+                <img src="../static/image/eye-close.png" width="30px" alt="图片未加载成功" class="icno" onclick="eyes(this)">
+            </div>
+
+            <div class="register-surepwd">
+                <input type="password" name="repwd" placeholder="确认密码" autocomplete="off" value="" id="repwd" >
+                <img src="../static/image/eye-close.png" width="30px" alt="图片未加载成功" class="icno" onclick="eyes(this)">
+            </div>
+            <div class="register-refernum">
+                <input type="email" name="email" placeholder="邮箱" autocomplete="off" value="" id="email" >
+                <img src="../static/image/Email.png" width="30px" alt="图片未加载成功" class="icno">
+            </div>
+            <div class="register-phonenum">
+                <input type="tel" name="ipnum" placeholder="推荐人手机号码" autocomplete="off" value="" id="ipnum1" >
+                <img src="../static/image/iPhone 128x128.png" width="30px" alt="图片未加载成功" class="icno">
+            </div>
+            <div class="register-yan">
+                <input type="text" id="verify" name="pwd" placeholder="验证码" autocomplete="off" value="" >
+                <input type="button" id="VerificationCode" value="点击获取验证码">
+                <div style="text-align: center;">
+                    <canvas id="canvas" style="height: 31.9px;"></canvas>
+                </div>
+            </div>
+            <div class="register-btn">
+                <input type="button" onclick="getSubmit()" value="注册">
+            </div>
+            <!-- <i class="fa fa-eye"></i> -->
+        </div>
+    </div>
+    <script src="../static/js/jquery-1.7.2.js"></script>
+    <script src="../static/js/sha1.js"></script>
+    <script src="../static/js/getVerificationCode.js"></script>
+    <script src="../static/js/index.js"></script>
+</body>
+
+</html>
