@@ -1,4 +1,4 @@
-module sharehouse
+module demo
 
 go 1.16
 

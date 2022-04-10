@@ -2,8 +2,8 @@ package db
 
 import (
 	"database/sql"
+	"demo/cfg"
 	"fmt"
-	"sharehouse/cfg"
 
 	_ "github.com/go-sql-driver/mysql" //init()
 )
@@ -45,15 +45,14 @@ func InitDB(c *cfg.Config) (err error) {
 
 	// sql语句，如果没存在库表tab_books，则新建一个
 	var sqlStr = `
-	CREATE TABLE IF NOT EXISTS tab_register  (
+	CREATE TABLE IF NOT EXISTS tab_user  (
 		id int(0) NOT NULL AUTO_INCREMENT COMMENT '用户唯一标识',
-		username varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL UNIQUE COMMENT '用户名',
+		username varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
 		phonenum bigint(0) NOT NULL COMMENT '电话号码',
 		password varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '密码',
-		email varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '邮箱',
-		retPhonenum bigint(0) NOT NULL COMMENT '推荐人电话号码',
 		time varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '创建时间',
-		PRIMARY KEY (id) USING BTREE
+		PRIMARY KEY (id, username, phonenum) USING BTREE,
+		UNIQUE INDEX username(username) USING BTREE
 	  ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic; 
 	`
 

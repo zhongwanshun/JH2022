@@ -1,11 +1,11 @@
 {
     "host": "0.0.0.0",
-    "port": "8000",
+    "port": "8080",
     "connection": {
-        "database": "rj01" ,
+        "database": "sharehouse" ,
         "host": "127.0.0.1",
-        "port":"3306",
+        "port": "3306",
         "user": "root",
-        "password": "root"
+        "password": "123456"
     }
 }

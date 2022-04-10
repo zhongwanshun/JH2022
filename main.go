@@ -1,10 +1,10 @@
 package main
 
 import (
+	"demo/cfg"
+	"demo/db"
+	"demo/routers"
 	"fmt"
-	"sharehouse/cfg"
-	"sharehouse/db"
-	"sharehouse/routers"
 )
 
 func main() {
@@ -17,6 +17,7 @@ func main() {
 		return
 	}
 	fmt.Printf("%#v\n", c)
+
 	// 初始化数据库
 	err = db.InitDB(c)
 	if err != nil {
