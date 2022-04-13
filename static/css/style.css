@@ -1,47 +1,4 @@
-/* 
-Template Name: HouseKey
-更多模板：http://www.bootstrapmb.com/
-Description: Real Estate HTML Template
- 
-*/
 
-
-/*--------------------------------------------------------------
- TABLE OF CONTENTS:
-----------------------------------------------------------------
-1. General & Basic Styles 
-2. MDC override
-3. Page Loading Spinner
-4. Top toolbar
-5. Main Toolbar
-  5.1 Horizontal Menu
-6. Sidenav 
-  6.1 Vertical Menu
-7. Carousel
-  7.1 Header Carousel
-  7.2 Testimonials Carousel
-  7.3 Clients Carousel
-8. Pages 
-  8.1 Pricing
-  8.2 Landing
-  8.3 Submit Property
-  8.4 Lock Screen
-9. Properties Filter
-10. Properties
-11. Pagination 
-12. Footer
-13. Spaces
-14. Flexbox
-15. Options
-16. Back To Top
-17. webkit-scrollbar 
-18. Comments
---------------------------------------------------------------*/
-
-
-/**************************************************************/
-/* General & Basic Styles
-/**************************************************************/  
 *{
   margin: 0;
   padding: 0;
@@ -931,15 +888,7 @@ header.toolbar-2 .horizontal-menu .mdc-button{
   text-align: left;
   width: 100%;
 }  
-.horizontal-menu a.menu-item-has-children .mdc-button__label::after {
-  font-family: 'Material Icons'; 
-  content: '\e5c5'; 
-  font-size: 24px;
-  line-height: 24px;   
-  display: inline-block;
-  position: absolute;
-  top: 7px;
-}
+
 .horizontal-menu .mdc-menu a.menu-item-has-children .mdc-button__label::after {  
   transform: rotate(270deg); 
   right: 10px;
@@ -1046,9 +995,7 @@ header.toolbar-2 .horizontal-menu .mdc-button{
   right: 8px;
 } 
 
-/**************************************************************/
-/* Carousel
-/**************************************************************/  
+
 .swiper-lazy-preloader{
   margin-top: 20px;
 }
