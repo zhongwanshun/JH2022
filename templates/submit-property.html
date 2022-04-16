@@ -419,16 +419,6 @@
                                                 </span>
                                                 <span class="mdc-tab__ripple"></span>
                                             </button>
-                                            <button class="mdc-tab mdc-tab" tabindex="0">
-                                                <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label">确认</span>
-                                                </span>
-                                                <span class="mdc-tab-indicator mdc-tab-indicator">
-                                                    <span
-                                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                                </span>
-                                                <span class="mdc-tab__ripple"></span>
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -809,7 +799,7 @@
                                     </div>
                                         <form action="javascript:void(0);" id="sp-additional-form" class="row">
                                             <div class="col-xs-12 p-3">
-                                                <h1 class="fw-500 text-center">其他信息</h1>
+                                                <p class="uppercase m-2 fw-500">其他信息</p>
                                             </div>
                                             <div class="col-xs-12 col-sm-6 col-md-4 p-2">
                                                 <div class="mdc-text-field mdc-text-field--outlined">
@@ -1046,203 +1036,34 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-xs-12 mt-2">
+                                                <label class="text-muted">房屋周边图片 (最多8张)</label>
+                                                <div id="property-images" class="dropzone needsclick">
+                                                    <div class="dz-message needsclick text-muted">
+                                                        将文件拖放到此处或单击以上传。
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="col-xs-12 p-2 mt-3 row between-xs">
                                                 <button class="mdc-button mdc-button--raised prev-tab" type="button">
                                                     <span class="mdc-button__ripple"></span>
-                                                    <i class="material-icons mdc-button__icon">navigate_before</i>
-                                                    <span class="mdc-button__label">后退</span>
+                                                    <span class="mdc-button__label">取消</span>
                                                 </button>
                                                 <button class="mdc-button mdc-button--raised next-tab" type="button">
                                                     <span class="mdc-button__ripple"></span>
-                                                    <span class="mdc-button__label">下一步</span>
-                                                    <i class="material-icons mdc-button__icon">navigate_next</i>
+                                                    <span class="mdc-button__label">确认</span>
                                                 </button>
                                             </div>
                                         </form>
-                                    </div> -->
-                                    <div class="col-xs-12 mb-2 p-0">
-                                        <p class="uppercase m-2 fw-500">筛选</p>
-                                        <div class="features">
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="air-conditioning" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="air-conditioning">空调</label>
-                                            </div>
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="barbeque" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="barbeque">烧烤</label>
-                                            </div>
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="dryer" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="dryer">烘干机</label>
-                                            </div>
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="microwave" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="microwave">微波炉</label>
-                                            </div>
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="refrigerator" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="refrigerator">冰箱</label>
-                                            </div>
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="tv-cable" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="tv-cable">电视</label>
-                                            </div>
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="sauna" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="sauna">桑拿</label>
-                                            </div>
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="wi-fi" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="wi-fi">无线上网</label>
-                                            </div>
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="fireplace" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="fireplace">壁炉</label>
-                                            </div>
-                                            <div class="mdc-form-field">
-                                                <div class="mdc-checkbox">
-                                                    <input type="checkbox" class="mdc-checkbox__native-control"
-                                                        id="gym" />
-                                                    <div class="mdc-checkbox__background">
-                                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                            <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                        </svg>
-                                                        <div class="mdc-checkbox__mixedmark"></div>
-                                                    </div>
-                                                    <div class="mdc-checkbox__ripple"></div>
-                                                </div>
-                                                <label for="gym">健身房</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 mt-2">
-                                        <label class="text-muted">房屋周边图片 (最多8张)</label>
-                                        <div id="property-images" class="dropzone needsclick">
-                                            <div class="dz-message needsclick text-muted">
-                                                将文件拖放到此处或单击以上传。
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 p-2 mt-3 end-xs">
-                                        <button class="mdc-button mdc-button--raised next-tab" type="button">
-                                            <span class="mdc-button__ripple"></span>
-                                            <span class="mdc-button__label">下一步</span>
-                                            <i class="material-icons mdc-button__icon">navigate_next</i>
-                                        </button>
                                     </div>
                                 </form>
                             </div>
-
                             </form>
-
-
                             <div class="tab-content">
                                 <form action="javascript:void(0);" id="sp-media-form" class="row">
                                     <div class="col-xs-12 p-3">
                                         <h1 class="fw-500 text-center">图片</h1>
                                     </div>
-
-
                                     <div class="col-xs-12 p-0 dynamic-steps">
                                         <div class="row middle-xs my-3 px-2">
                                             <p class="mb-0"><span class="uppercase fw-500">规划</span></p>
