@@ -1,9 +1,10 @@
 package db
 
 import (
+	"bytes"
 	"database/sql"
-	"demo/cfg"
-	"fmt"
+	c "demo/cfg"
+	"demo/log"
 
 	_ "github.com/go-sql-driver/mysql" //init()
 )
@@ -21,20 +22,31 @@ func createTable(sql *string) error {
 }
 
 // 初始化数据库	三张表
-func InitDB(c *cfg.Config) (err error) {
-
-	dbc := c.Connection // 结构体c MySQL部分
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", dbc.User, dbc.Password, dbc.Host, dbc.Port, dbc.Database)
+func InitDB(m *c.Mysql) (err error) {
+	// 初始化数据库
+	// dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", m.User, m.Password, m.Host, m.Port, m.Database)
+	var buffer bytes.Buffer
+	buffer.WriteString(m.User)
+	buffer.WriteString(":")
+	buffer.WriteString(m.Password)
+	buffer.WriteString("@tcp(")
+	buffer.WriteString(m.Host)
+	buffer.WriteString(":")
+	buffer.WriteString(m.Port)
+	buffer.WriteString(")")
+	buffer.WriteString("/")
+	buffer.WriteString(m.Database)
+	dsn := buffer.String()
 
 	DB, err = sql.Open("mysql", dsn) // 不会校验用户名和密码是否正确
 	if err != nil {                  // dsn格式不对会报错
-		fmt.Printf("dsn:%s invalid,err:%v\n", dsn, err)
+		log.Error.Printf("dsn:%s invalid,err:%v\n", dsn, err)
 		return
 	}
 
 	err = DB.Ping() //尝试连接数据库
 	if err != nil {
-		fmt.Printf("Open %s failded,err:%v\n", dsn, err)
+		log.Error.Printf("Open %s failded,err:%v\n", dsn, err)
 		return
 	}
 

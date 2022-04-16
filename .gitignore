@@ -18,9 +18,7 @@ _cgo_*
 _obj
 _test
 _testmain.go
-go.mod
-go.sum
-
+logger/*
 /VERSION.cache
 /bin/
 /build.out

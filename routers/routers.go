@@ -1,29 +1,45 @@
 package routers
 
 import (
+	"bytes"
+	c "demo/cfg"
 	h "demo/handler"
+	"demo/log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
-func SetupRouter() *gin.Engine {
-
+func SetupRouter(r *c.Server) {
+	switch r.SetMode {
+	case "DebugMode":
+		gin.SetMode(gin.DebugMode) //设置模式 ReleaseMode 生产模式,DebugMode 开发模式
+	case "ReleaseMode":
+		gin.SetMode(gin.ReleaseMode)
+	default:
+		gin.SetMode(gin.ReleaseMode)
+	}
 	router := gin.Default()
+	gin.ForceConsoleColor()                         //强制使用控制台颜色
+	router.SetTrustedProxies([]string{r.Http_Port}) // 设置代理
 
 	// 告诉gin框架模板文件引用的静态文件去哪里找
 	router.Static("/static", "static")
 	// 告诉gin框架去哪里找模板文件
 	router.LoadHTMLGlob("templates/*")
 
+	// 将请求的路径记录到日志中
+	router.Use(func(c *gin.Context) {
+		path := c.Request.URL.Path
+		if path == "/" {
+			path = "/index"
+		}
+		log.Trace.Printf("%s %s\n", c.Request.Method, path)
+		c.Next()
+	})
 	// GET请求路由组
 	getRouter := router.Group("/")
 	{
-		// 路由
-		getRouter.GET("/", func(c *gin.Context) {
-			c.Redirect(http.StatusMovedPermanently, "/index")
-		})
-
 		/* index */
 		getRouter.GET("/index", func(c *gin.Context) {
 			c.HTML(http.StatusOK, "index.html", gin.H{
@@ -61,7 +77,6 @@ func SetupRouter() *gin.Engine {
 			}
 		})
 	}
-
 	// POST请求路由组
 	postRouter := router.Group("/user")
 	{
@@ -70,6 +85,8 @@ func SetupRouter() *gin.Engine {
 		// 注册
 		postRouter.POST("/register", h.AddUsersHandler)
 	}
-
-	return router
+	var buffer bytes.Buffer
+	buffer.WriteString(":")
+	buffer.WriteString(r.Http_Port)
+	router.Run(buffer.String())
 }
