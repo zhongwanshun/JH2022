@@ -34,7 +34,7 @@ func SetupRouter(r *c.Server) {
 		if path == "/" {
 			path = "/index"
 		}
-		log.Trace.Printf("%s %s\n", c.Request.Method, path)
+		log.Trace.Printf("请求的路径:%s %s\n", c.Request.Method, path)
 		c.Next()
 	})
 	// GET请求路由组
