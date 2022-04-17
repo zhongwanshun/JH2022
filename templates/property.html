@@ -1,288 +1,273 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>房产详情</title> 
-    <link rel="icon" type="image/x-icon" href="./static/assets/favicon.ico">  
+    <title>房产详情</title>
+    <link rel="icon" type="image/x-icon" href="./static/assets/favicon.ico">
     <link rel="stylesheet" href="./static/css/Montserrat.css">
-    <link rel="stylesheet" href="./static/css/icon.css">  
+    <link rel="stylesheet" href="./static/css/icon.css">
     <link rel="stylesheet" href="./static/css/libs/swiper.min.css">
-    <link rel="stylesheet" href="./static/css/libs/material-components-web.min.css">  
-    <link rel="stylesheet" href="./static/css/style.css"> 
-    <link rel="stylesheet" href="./static/css/skins/blue.css">  
-    <link rel="stylesheet" href="./static/css/responsive.css">  
+    <link rel="stylesheet" href="./static/css/libs/material-components-web.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/skins/blue.css">
+    <link rel="stylesheet" href="./static/css/responsive.css">
 </head>
-<body class="mdc-theme--background"> 
+
+<body class="mdc-theme--background">
     <div class="spinner-wrapper" id="preloader">
         <div class="spinner-container">
             <div class="spinner-outer">
                 <div class="spinner">
                     <div class="left mask">
-                        <div class="plane"></div>  
-                    </div>            
+                        <div class="plane"></div>
+                    </div>
                     <div class="top mask">
                         <div class="plane"></div>
                     </div>
                     <div class="right mask">
-                        <div class="plane"></div>  
-                    </div>            
+                        <div class="plane"></div>
+                    </div>
                     <div class="triangle">
-                        <div class="triangle-plane"></div> 
+                        <div class="triangle-plane"></div>
                     </div>
                     <div class="top-left mask">
                         <div class="plane"></div>
                     </div>
                     <div class="top-right mask">
                         <div class="plane"></div>
-                    </div>            
+                    </div>
                 </div>
-                <p class="spinner-text">BCSH</p> 
+                <p class="spinner-text">BCSH</p>
             </div>
         </div>
-    </div> 
- 
+    </div>
+
     <aside class="mdc-drawer mdc-drawer--modal sidenav">
         <div class="row end-xs middle-xs py-1 px-3">
-            <button id="sidenav-close" class="mdc-icon-button material-icons warn-color">close</button> 
+            <button id="sidenav-close" class="mdc-icon-button material-icons warn-color">close</button>
         </div>
         <hr class="mdc-list-divider m-0">
-        <div class="mdc-drawer__content"> 
-            <div class="vertical-menu">   
-                <div class="mdc-menu-surface--anchor"> 
-                    <a href="javascript:void(0);" class="mdc-button menu-item-has-children"> 
-                        <span class="mdc-button__ripple"></span> 
+        <div class="mdc-drawer__content">
+            <div class="vertical-menu">
+                <div class="mdc-menu-surface--anchor">
+                    <a href="index" class="mdc-button menu-item-has-children">
                         <span class="mdc-button__label">首页</span>
-                    </a>  
+                    </a>
                     <div class="mdc-menu mdc-menu-surface">
-                        <div class="mdc-list"> 
-                            <div> 
-                                <a href="header-default.html" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">主页</span> 
-                                </a>  
+                        <div class="mdc-list">
+                            <div>
+                                <a href="header-default.html" class="mdc-button">
+                                    <span class="mdc-button__label">主页</span>
+                                </a>
                             </div>
-                            <div> 
-                                <a href="index" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">首页</span> 
-                                </a>  
-                            </div>  
-
-                              
+                            <div>
+                                <a href="index" class="mdc-button">
+                                    <span class="mdc-button__label">首页</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>  
-                </div>   
+                    </div>
+                </div>
                 <div>
                     <a href="properties.html" class="mdc-button">
-                        <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">筛选</span> 
-                    </a> 
-                </div>  
-                <div class="mdc-menu-surface--anchor"> 
-                    <a href="javascript:void(0);" class="mdc-button menu-item-has-children"> 
-                        <span class="mdc-button__ripple"></span> 
-                        <span class="mdc-button__label">更多</span> 
-                    </a>  
+                        <span class="mdc-button__label">筛选</span>
+                    </a>
+                </div>
+                <div class="mdc-menu-surface--anchor">
+                    <a href="index" class="mdc-button menu-item-has-children">
+                        <span class="mdc-button__label">更多</span>
+                    </a>
                     <div class="mdc-menu mdc-menu-surface">
-                        <div class="mdc-list"> 
-                            <div> 
-                                <a href="property.html" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">个人财产</span> 
-                                </a>  
-                            </div><div> 
-                                <a href="agents.html" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">代理</span> 
-                                </a>  
+                        <div class="mdc-list">
+                            <div>
+                                <a href="property.html" class="mdc-button">
+                                    <span class="mdc-button__label">个人财产</span>
+                                </a>
                             </div>
-
-                            <div> 
-                                <a href="login.html" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">登录</span> 
-                                </a>  
+                            <div>
+                                <a href="agents.html" class="mdc-button">
+                                    <span class="mdc-button__label">代理</span>
+                                </a>
                             </div>
-                            <div> 
-                                <a href="register.html" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">注册</span> 
-                                </a>  
+                            <div>
+                                <a href="login.html" class="mdc-button">
+                                    <span class="mdc-button__label">登录</span>
+                                </a>
                             </div>
-                            <div> 
-                                <a href="faqs.html" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">常见问题解答</span> 
-                                </a>  
+                            <div>
+                                <a href="register.html" class="mdc-button">
+                                    <span class="mdc-button__label">注册</span>
+                                </a>
                             </div>
-                            <div> 
-                                <a href="pricing.html" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">价钱</span> 
-                                </a>  
+                            <div>
+                            <a href="faqs.html" class="mdc-button">
+                                    <span class="mdc-button__label">常见问题解答</span>
+                                </a>
                             </div>
-                            <div> 
-                                <a href="terms.html" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">条款与条件</span> 
-                                </a>  
+                            <div>
+                                <a href="pricing.html" class="mdc-button">
+                                    <span class="mdc-button__label">价钱</span>
+                                </a>
                             </div>
-                            <div> 
-                                <a href="index" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">平台</span> 
-                                </a>  
+                            <div>
+                                <a href="terms.html" class="mdc-button">
+                                    <span class="mdc-button__label">条款与条件</span>
+                                </a>
                             </div>
-                            <div> 
-                                <a href="404.html" class="mdc-button"> 
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">404页面</span> 
-                                </a>  
-                            </div> 
-                             
+                            <div>
+                                <a href="index" class="mdc-button">
+                                    <span class="mdc-button__label">平台</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="404.html" class="mdc-button">
+                                    <span class="mdc-button__label">404页面</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>  
-                </div> 
+                    </div>
+                </div>
                 <div>
                     <a href="contact.html" class="mdc-button">
-                        <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">联系</span> 
-                    </a> 
-                </div> 
+                        <span class="mdc-button__label">联系</span>
+                    </a>
+                </div>
                 <div>
                     <a href="about.html" class="mdc-button">
-                        <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">关于我们</span> 
-                    </a> 
-                </div>  
-            </div>  
+                        <span class="mdc-button__label">关于我们</span>
+                    </a>
+                </div>
+            </div>
         </div>
         <hr class="mdc-list-divider m-0">
         <div class="row center-xs middle-xs py-3">
             <a href="https://www.facebook.com/" target="blank" class="social-icon">
                 <svg class="material-icons mat-icon-xlg primary-color" viewBox="0 0 24 24">
-                    <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z" />
+                    <path
+                        d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z" />
                 </svg>
             </a>
             <a href="https://twitter.com/" target="blank" class="social-icon">
                 <svg class="material-icons mat-icon-xlg primary-color" viewBox="0 0 24 24">
-                    <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.71,9.33C18.19,8.93 18.75,8.45 19,7.92C18.59,8.13 18.1,8.26 17.56,8.33C18.06,7.97 18.47,7.5 18.68,6.86C18.16,7.14 17.63,7.38 16.97,7.5C15.42,5.63 11.71,7.15 12.37,9.95C9.76,9.79 8.17,8.61 6.85,7.16C6.1,8.38 6.75,10.23 7.64,10.74C7.18,10.71 6.83,10.57 6.5,10.41C6.54,11.95 7.39,12.69 8.58,13.09C8.22,13.16 7.82,13.18 7.44,13.12C7.81,14.19 8.58,14.86 9.9,15C9,15.76 7.34,16.29 6,16.08C7.15,16.81 8.46,17.39 10.28,17.31C14.69,17.11 17.64,13.95 17.71,9.33Z" />
-                </svg> 
-            </a>
-            <a href="https://www.linkedin.com/" target="blank" class="social-icon"> 
-                <svg class="material-icons mat-icon-xlg primary-color" viewBox="0 0 24 24">
-                    <path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
+                    <path
+                        d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.71,9.33C18.19,8.93 18.75,8.45 19,7.92C18.59,8.13 18.1,8.26 17.56,8.33C18.06,7.97 18.47,7.5 18.68,6.86C18.16,7.14 17.63,7.38 16.97,7.5C15.42,5.63 11.71,7.15 12.37,9.95C9.76,9.79 8.17,8.61 6.85,7.16C6.1,8.38 6.75,10.23 7.64,10.74C7.18,10.71 6.83,10.57 6.5,10.41C6.54,11.95 7.39,12.69 8.58,13.09C8.22,13.16 7.82,13.18 7.44,13.12C7.81,14.19 8.58,14.86 9.9,15C9,15.76 7.34,16.29 6,16.08C7.15,16.81 8.46,17.39 10.28,17.31C14.69,17.11 17.64,13.95 17.71,9.33Z" />
                 </svg>
             </a>
-            <a href="https://plus.google.com/" target="blank" class="social-icon"> 
+            <a href="https://www.linkedin.com/" target="blank" class="social-icon">
                 <svg class="material-icons mat-icon-xlg primary-color" viewBox="0 0 24 24">
-                    <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M19.5,12H18V10.5H17V12H15.5V13H17V14.5H18V13H19.5V12M9.65,11.36V12.9H12.22C12.09,13.54 11.45,14.83 9.65,14.83C8.11,14.83 6.89,13.54 6.89,12C6.89,10.46 8.11,9.17 9.65,9.17C10.55,9.17 11.13,9.56 11.45,9.88L12.67,8.72C11.9,7.95 10.87,7.5 9.65,7.5C7.14,7.5 5.15,9.5 5.15,12C5.15,14.5 7.14,16.5 9.65,16.5C12.22,16.5 13.96,14.7 13.96,12.13C13.96,11.81 13.96,11.61 13.89,11.36H9.65Z" />
+                    <path
+                        d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
                 </svg>
             </a>
-        </div>  
+            <a href="https://plus.google.com/" target="blank" class="social-icon">
+                <svg class="material-icons mat-icon-xlg primary-color" viewBox="0 0 24 24">
+                    <path
+                        d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M19.5,12H18V10.5H17V12H15.5V13H17V14.5H18V13H19.5V12M9.65,11.36V12.9H12.22C12.09,13.54 11.45,14.83 9.65,14.83C8.11,14.83 6.89,13.54 6.89,12C6.89,10.46 8.11,9.17 9.65,9.17C10.55,9.17 11.13,9.56 11.45,9.88L12.67,8.72C11.9,7.95 10.87,7.5 9.65,7.5C7.14,7.5 5.15,9.5 5.15,12C5.15,14.5 7.14,16.5 9.65,16.5C12.22,16.5 13.96,14.7 13.96,12.13C13.96,11.81 13.96,11.61 13.89,11.36H9.65Z" />
+                </svg>
+            </a>
+        </div>
     </aside>
-    <div class="mdc-drawer-scrim sidenav-scrim"></div>  
-    <header class="toolbar-1">  
-        <div id="top-toolbar" class="mdc-top-app-bar"> 
+    <div class="mdc-drawer-scrim sidenav-scrim"></div>
+    <header class="toolbar-1">
+        <div id="top-toolbar" class="mdc-top-app-bar">
             <div class="theme-container row between-xs middle-xs h-100">
-                    <button id="sidenav-toggle" class="mdc-button mdc-ripple-surface d-md-none d-lg-none d-xl-none">
-                        <span class="mdc-button__ripple"></span>
-                        <i class="material-icons">menu</i>
+                <button id="sidenav-toggle" class="mdc-button mdc-ripple-surface d-md-none d-lg-none d-xl-none">
+                    <i class="material-icons">menu</i>
+                </button>
+                <div class="mdc-menu-surface--anchor">
+                    <button class="mdc-button mdc-ripple-surface">
+                        <i class="material-icons mdc-button__icon mx-1">people</i>
+                        <span class="mdc-button__label">账户</span>
+                        <i class="material-icons mdc-button__icon m-0">sorrow_drop_down</i>
                     </button>
-                    <div class="mdc-menu-surface--anchor"> 
-                        <button class="mdc-button mdc-ripple-surface"> 
-                            <span class="mdc-button__ripple"></span>
-                            <i class="material-icons mdc-button__icon mx-1">people</i>
-                            <span class="mdc-button__label">账户</span>
-                            <i class="material-icons mdc-button__icon m-0">sorrow_drop_down</i>
-                        </button> 
-                        <div class="mdc-menu mdc-menu-surface user-menu">
-                            <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
-                                <li class="user-info row start-xs middle-xs">                   
-                                    <img src="./static/assets/images/others/user.jpg" alt="user-image" width="50">
-                                    <p class="m-0">昵称 <br> <small><i>账号名</i></small></p>
-                                </li>
-                                <li role="separator" class="mdc-list-divider m-0"></li> 
-                                <li>
-                                    <a href="submit-property.html" class="mdc-list-item" role="menuitem">
-                                        <i class="material-icons mat-icon-sm text-muted">add_circle</i> 
-                                        <span class="mdc-list-item__text px-3">上架房屋</span>
-                                    </a> 
-                                </li>
-                                <li>
-                                    <a href="my-properties.html" class="mdc-list-item" role="menuitem">
-                                        <i class="material-icons mat-icon-sm text-muted">home</i>
-                                        <span class="mdc-list-item__text px-3">我的财产</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="favorites.html" class="mdc-list-item" role="menuitem">
-                                        <i class="material-icons mat-icon-sm text-muted">favorite_border</i> 
-                                        <span class="mdc-list-item__text px-3">我的喜爱
-                                            <span class="badge warn">2</span>
-                                        </span> 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="compare.html" class="mdc-list-item" role="menuitem">
-                                        <i class="material-icons mat-icon-sm text-muted">compare_arrows</i> 
-                                        <span class="mdc-list-item__text px-3">对比
-                                            <span class="badge primary">3</span>
-                                        </span> 
-                                    </a>
-                                </li> 
-                                <li>
-                                    <a href="#" class="mdc-list-item" role="menuitem">
-                                        <i class="material-icons mat-icon-sm text-muted">search</i> 
-                                        <span class="mdc-list-item__text px-3">保存搜索</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="profile.html" class="mdc-list-item" role="menuitem">
-                                        <i class="material-icons mat-icon-sm text-muted">edit</i> 
-                                        <span class="mdc-list-item__text px-3">编辑配置文件</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="lock-screen.html" class="mdc-list-item" role="menuitem">
-                                        <i class="material-icons mat-icon-sm text-muted">lock</i> 
-                                        <span class="mdc-list-item__text px-3">锁定屏幕</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="faqs.html" class="mdc-list-item" role="menuitem">
-                                        <i class="material-icons mat-icon-sm text-muted">help</i> 
-                                        <span class="mdc-list-item__text px-3">帮助</span>
-                                    </a>
-                                </li>
-                                <li role="separator" class="mdc-list-divider m-0"></li>
-                                <li>
-                                    <a href="login.html" class="mdc-list-item" role="menuitem">
-                                        <i class="material-icons mat-icon-sm text-muted">power_settings_new</i> 
-                                        <span class="mdc-list-item__text px-3">退出登录</span>
-                                    </a>
-                                </li> 
-                            </ul>
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-        </div>  
+                    <div class="mdc-menu mdc-menu-surface user-menu">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                            <li class="user-info row start-xs middle-xs">
+                                <img src="./static/assets/images/others/user.jpg" alt="user-image" width="50">
+                                <p class="m-0">昵称 <br> <small><i>账号名</i></small></p>
+                            </li>
+                            <li role="separator" class="mdc-list-divider m-0"></li>
+                            <li>
+                                <a href="submit-property.html" class="mdc-list-item" role="menuitem">
+                                    <i class="material-icons mat-icon-sm text-muted">add_circle</i>
+                                    <span class="mdc-list-item__text px-3">上架房屋</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="my-properties.html" class="mdc-list-item" role="menuitem">
+                                    <i class="material-icons mat-icon-sm text-muted">home</i>
+                                    <span class="mdc-list-item__text px-3">我的财产</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="favorites.html" class="mdc-list-item" role="menuitem">
+                                    <i class="material-icons mat-icon-sm text-muted">favorite_border</i>
+                                    <span class="mdc-list-item__text px-3">我的喜爱
+                                        <span class="badge warn">2</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="compare.html" class="mdc-list-item" role="menuitem">
+                                    <i class="material-icons mat-icon-sm text-muted">compare_arrows</i>
+                                    <span class="mdc-list-item__text px-3">对比
+                                        <span class="badge primary">3</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mdc-list-item" role="menuitem">
+                                    <i class="material-icons mat-icon-sm text-muted">search</i>
+                                    <span class="mdc-list-item__text px-3">保存搜索</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="profile.html" class="mdc-list-item" role="menuitem">
+                                    <i class="material-icons mat-icon-sm text-muted">edit</i>
+                                    <span class="mdc-list-item__text px-3">编辑配置文件</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lock-screen.html" class="mdc-list-item" role="menuitem">
+                                    <i class="material-icons mat-icon-sm text-muted">lock</i>
+                                    <span class="mdc-list-item__text px-3">锁定屏幕</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="faqs.html" class="mdc-list-item" role="menuitem">
+                                    <i class="material-icons mat-icon-sm text-muted">help</i>
+                                    <span class="mdc-list-item__text px-3">帮助</span>
+                                </a>
+                            </li>
+                            <li role="separator" class="mdc-list-divider m-0"></li>
+                            <li>
+                                <a href="login.html" class="mdc-list-item" role="menuitem">
+                                    <i class="material-icons mat-icon-sm text-muted">power_settings_new</i>
+                                    <span class="mdc-list-item__text px-3">退出登录</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
         <div id="main-toolbar" class="mdc-elevation--z2" style="background-color: rgb(255, 255, 255);">
             <div class="theme-container row between-xs middle-xs h-100">
                 <image src="././static/assets/images//others/logo.png" style="width: 60px; height: 60px;"></image>
                 <div class="horizontal-menu d-none d-md-flex d-lg-flex d-xl-flex">
                     <div class="mdc-menu-surface--anchor">
-                        <a href="#" class="mdc-button menu-item-has-children mdc-ripple-upgraded">
+                        <a href="index" class="mdc-button menu-item-has-children mdc-ripple-upgraded">
                             <span>首页</span>
                         </a>
                     </div>
                 </div>
                 <div>
                     <a href="header-default.html" class="mdc-button mdc-ripple-upgraded">
-                        <span class="mdc-button__label" >主页</span>
+                        <span class="mdc-button__label">主页</span>
                     </a>
                 </div>
                 <div>
@@ -292,18 +277,18 @@
                 </div>
                 <div class="mdc-menu-surface--anchor">
                     <a href="javascript:void(0);" class="mdc-button menu-item-has-children mdc-ripple-upgraded">
-                        <span class="mdc-button__label" >更多</span>
+                        <span class="mdc-button__label">更多</span>
                     </a>
                     <div class="mdc-menu mdc-menu-surface">
                         <div class="mdc-list">
                             <div>
                                 <a href="login.html" class="mdc-button mdc-ripple-upgraded">
-                                    <span class="mdc-button__label" >登录</span>
+                                    <span class="mdc-button__label">登录</span>
                                 </a>
                             </div>
                             <div>
                                 <a href="register.html" class="mdc-button mdc-ripple-upgraded">
-                                    <span class="mdc-button__label" >注册</span>
+                                    <span class="mdc-button__label">注册</span>
                                 </a>
                             </div>
                             <div>
@@ -313,7 +298,7 @@
                             </div>
                             <div>
                                 <a href="properties.html" class="mdc-button mdc-ripple-upgraded ">
-                                    <span class="mdc-button__label " >筛选</span>
+                                    <span class="mdc-button__label ">筛选</span>
                                 </a>
                             </div>
                             <div>
@@ -333,7 +318,6 @@
                             </div>
                             <div class="mdc-menu-surface--anchor">
                                 <a href="#" class="mdc-button menu-item-has-children mdc-ripple-upgraded">
-                                    <span class="mdc-button__ripple"></span>
                                     <span class="mdc-button__label">其他</span>
                                 </a>
                                 <div class="mdc-menu mdc-menu-surface">
@@ -341,7 +325,7 @@
                                         <div>
                                             <a href="http://themeseason.com" target="_blank"
                                                 class="mdc-button mdc-ripple-upgraded">
-                                                <span class="mdc-button__ripple"></span>
+
                                                 <span class="mdc-button__label">问题反馈</span>
                                             </a>
                                         </div>
@@ -363,20 +347,18 @@
                     </a>
                     <a href="submit-property.html"
                         class="mdc-button mdc-button--raised d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex mdc-ripple-upgraded">
-                        <span class="mdc-button__ripple"></span>
                         <span class="mdc-button__label">上架房屋</span>
                     </a>
                 </div>
             </div>
-
         </div>
-    </header>   
-    <main>   
-        <div class="px-3">  
-            <div class="theme-container">  
-                <div class="page-drawer-container single-property mt-3"> 
+    </header>
+    <main>
+        <div class="px-3">
+            <div class="theme-container">
+                <div class="page-drawer-container single-property mt-3">
                     <div class="page-sidenav-content">
-                        <div class="mdc-card row between-xs middle-xs p-3">             
+                        <div class="mdc-card row between-xs middle-xs p-3">
                             <div>
                                 <h2 class="uppercase">宽敞温暖的公寓</h2>
                                 <p class="row flex-nowrap address mb-0">
@@ -384,115 +366,140 @@
                                     <span class="fw-500 text-muted">上海市中心</span>
                                 </p>
                             </div>
-                            <div class="column mx-3"> 
+                            <div class="column mx-3">
                                 <h2 class="primary-color price">
-                                    <span>￥ 1,450,000</span> 
-                                </h2> 
-                                <div class="row start-xs middle-xs ratings" title="29">      
+                                    <span>￥ 1,450,000</span>
+                                </h2>
+                                <div class="row start-xs middle-xs ratings" title="29">
                                     <i class="material-icons mat-icon-sm">star</i>
                                     <i class="material-icons mat-icon-sm">star</i>
                                     <i class="material-icons mat-icon-sm">star</i>
                                     <i class="material-icons mat-icon-sm">star</i>
                                     <i class="material-icons mat-icon-sm">star_half</i>
-                                </div>  
+                                </div>
                             </div>
-                            <button id="page-sidenav-toggle" class="mdc-icon-button material-icons text-muted d-md-none d-lg-none d-xl-none"> 
-                                more_vert 
+                            <button id="page-sidenav-toggle"
+                                class="mdc-icon-button material-icons text-muted d-md-none d-lg-none d-xl-none">
+                                more_vert
                             </button>
                         </div>
-                        <div class="mdc-card p-3 mt-3">  
-                            <div class="main-carousel mb-3"> 
+                        <div class="mdc-card p-3 mt-3">
+                            <div class="main-carousel mb-3">
                                 <div class="control-icons">
                                     <button class="mdc-button add-to-favorite" title="Add To Favorite">
                                         <i class="material-icons">favorite_border</i>
                                     </button>
                                     <button class="mdc-button" title="Add To Compare">
                                         <i class="material-icons">compare_arrows</i>
-                                    </button>  
-                                </div>  
+                                    </button>
+                                </div>
                                 <div class="swiper-container">
-                                    <div class="swiper-wrapper"> 
+                                    <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/1-medium.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div> 
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/1-medium.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
                                         <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/1-medium.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div> 
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/1-medium.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
                                         <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/1-medium.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div> 
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/1-medium.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
                                         <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/1-medium.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div> 
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/1-medium.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
                                         <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/1-medium.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div>    
-                                    </div>     
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/1-medium.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                    </div>
                                     <button class="swiper-button-prev swipe-arrow mdc-fab mdc-fab--mini primary">
                                         <span class="mdc-fab__ripple"></span>
-                                        <span class="mdc-fab__icon material-icons">keyboard_arrow_left</span> 
+                                        <span class="mdc-fab__icon material-icons">keyboard_arrow_left</span>
                                     </button>
-                                    <button class="swiper-button-next swipe-arrow mdc-fab mdc-fab--mini primary"> 
+                                    <button class="swiper-button-next swipe-arrow mdc-fab mdc-fab--mini primary">
                                         <span class="mdc-fab__ripple"></span>
-                                        <span class="mdc-fab__icon material-icons">keyboard_arrow_right</span> 
-                                    </button>   
-                                </div>
-                            </div> 
-
-                            <div class="small-carousel">   
-                                <div id="small-carousel" class="swiper-container"> 
-                                    <div class="swiper-wrapper">  
-                                        <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/1-small.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div> 
-                                        <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/2-small.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div> 
-                                        <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/3-small.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div> 
-                                        <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/4-small.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div> 
-                                        <div class="swiper-slide">
-                                            <img src="./static/assets/images/others/transparent-bg.png" alt="slide image" data-src="./static/assets/images/props/flat-2/5-small.jpg" class="slide-item swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div> 
-                                        </div>  
-                                    </div>  
+                                        <span class="mdc-fab__icon material-icons">keyboard_arrow_right</span>
+                                    </button>
                                 </div>
                             </div>
-
-
+                            <div class="small-carousel">
+                                <div id="small-carousel" class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/1-small.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/2-small.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/3-small.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/4-small.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./static/assets/images/others/transparent-bg.png"
+                                                alt="slide image"
+                                                data-src="./static/assets/images/props/flat-2/5-small.jpg"
+                                                class="slide-item swiper-lazy">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mdc-card p-3 mt-3"> 
-                            <h2 class="uppercase text-center fw-500 mb-2">详情</h2>  
+                        <div class="mdc-card p-3 mt-3">
+                            <h2 class="uppercase text-center fw-500 mb-2">详情</h2>
                             <div class="row details">
                                 <div class="row col-xs-12 col-sm-6 item">
                                     <span>房屋种类:</span>
                                     <span>公寓</span>
-                                </div> 
+                                </div>
                                 <div class="row col-xs-12 col-sm-6 item">
                                     <span>售卖情况:</span>
                                     <div class="row list">
                                         <span>热卖</span>
-                                        
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="row col-xs-12 col-sm-6 item">
                                     <span>城市:</span>
                                     <span>上海</span>
                                 </div>
-                                
-                                
                                 <div class="row col-xs-12 col-sm-6 item">
                                     <span>卧室:</span>
                                     <span>2</span>
@@ -513,10 +520,10 @@
                                     <span>建造年份:</span>
                                     <span>2007</span>
                                 </div>
-                            </div>   
+                            </div>
                         </div>
-                        <div class="mdc-card p-3 mt-3"> 
-                            <h2 class="uppercase text-center fw-500 mb-2">筛选</h2>  
+                        <div class="mdc-card p-3 mt-3">
+                            <h2 class="uppercase text-center fw-500 mb-2">筛选</h2>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4 row middle-xs">
                                     <i class="material-icons mat-icon-sm primary-color">check</i>
@@ -554,11 +561,11 @@
                                 <div class="col-xs-12 col-sm-4 row middle-xs">
                                     <i class="material-icons mat-icon-sm primary-color">check</i>
                                     <span class="mx-2">游泳池</span>
-                                </div> 
-                            </div> 
+                                </div>
+                            </div>
                         </div>
-                        <div class="mdc-card p-3 mt-3"> 
-                            <h2 class="uppercase text-center fw-500 mb-2"> 附加的东西</h2>  
+                        <div class="mdc-card p-3 mt-3">
+                            <h2 class="uppercase text-center fw-500 mb-2"> 附加的东西</h2>
                             <div class="row details">
                                 <div class="row col-xs-12 col-sm-6 item">
                                     <span>供热:</span>
@@ -568,130 +575,133 @@
                                     <span>屋顶:</span>
                                     <span>组成/瓦片</span>
                                 </div>
-                               
                                 <div class="row col-xs-12 col-sm-6 item">
                                     <span>窗子:</span>
                                     <span>天窗</span>
                                 </div>
-                                
                                 <div class="row col-xs-12 col-sm-6 item">
                                     <span>儿童房:</span>
                                     <span>2</span>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
-                        <div class="mdc-card p-3 mt-3"> 
-                            <h2 class="uppercase text-center fw-500 mb-2">描述</h2>  
+                        <div class="mdc-card p-3 mt-3">
+                            <h2 class="uppercase text-center fw-500 mb-2">描述</h2>
                             <p>位于上海市中心</p>
                             <p>交通便利</p>
-                           </div>
-                        
-                        <div class="mdc-card p-3 mt-3"> 
-                            <h2 class="uppercase text-center fw-500 mb-2">房屋布局图</h2> 
-                            <div class="expansion-panel-wrapper"> 
+                        </div>
+                        <div class="mdc-card p-3 mt-3">
+                            <h2 class="uppercase text-center fw-500 mb-2">房屋布局图</h2>
+                            <div class="expansion-panel-wrapper">
                                 <div class="mdc-card expansion-panel">
                                     <div class="row between-xs middle-xs expansion-panel-header">
                                         <div class="fw-500">第一层</div>
-                                        <div class="text-muted d-none d-md-flex d-lg-flex d-xl-flex"> 
+                                        <div class="text-muted d-none d-md-flex d-lg-flex d-xl-flex">
                                             <span>面积: <span class="fw-500">1180 m²</span></span>
                                             <span class="mx-3">房间: <span class="fw-500">3</span></span>
-                                            <span>浴室: <span class="fw-500">1</span></span>  
-                                        </div>                         
+                                            <span>浴室: <span class="fw-500">1</span></span>
+                                        </div>
                                     </div>
                                     <div class="expansion-panel-body text-center">
                                         <img src="./static/assets/images/others/plan-1.jpg" alt="plan-1" class="mw-100">
                                         <p>图纸说明</p>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="mdc-card expansion-panel">
                                     <div class="row between-xs middle-xs expansion-panel-header">
                                         <div class="fw-500">第二层</div>
-                                        <div class="text-muted d-none d-md-flex d-lg-flex d-xl-flex"> 
+                                        <div class="text-muted d-none d-md-flex d-lg-flex d-xl-flex">
                                             <span>面积: <span class="fw-500">1200 m²</span></span>
                                             <span class="mx-3">房间: <span class="fw-500">5</span></span>
-                                            <span>浴室: <span class="fw-500">2</span></span>  
-                                        </div>                        
+                                            <span>浴室: <span class="fw-500">2</span></span>
+                                        </div>
                                     </div>
                                     <div class="expansion-panel-body text-center">
                                         <img src="./static/assets/images/others/plan-2.jpg" alt="plan-2" class="mw-100">
                                         <p>图纸说明</p>
                                     </div>
-                                </div>  
+                                </div>
                             </div>
                         </div>
-                        <div class="mdc-card p-3 mt-3 row between-xs middle-xs"> 
+                        <div class="mdc-card p-3 mt-3 row between-xs middle-xs">
                             <span>序号:<span class="fw-500 mx-2">1</span></span>
                             <span>发布时间:<span class="fw-500 mx-2">2022年 4月12日</span></span>
                             <span>最后更新时间:<span class="fw-500 mx-2">2019年2月18日</span></span>
-                            <span>浏览量:<span class="fw-500 mx-2">322</span></span> 
-                        </div> 
-                        
-
-                        <div class="mdc-card p-5 mt-5"> 
-                            <h2 class="uppercase text-center fw-500 mb-2">发表评论</h2>                
+                            <span>浏览量:<span class="fw-500 mx-2">322</span></span>
+                        </div>
+                        <div class="mdc-card p-5 mt-5">
+                            <h2 class="uppercase text-center fw-500 mb-2">发表评论</h2>
                             <div class="row pb-3 p-relative">
                                 <div class="divider"></div>
-                            </div>  
+                            </div>
                             <div class="reviews mt-3">
                                 <div class="review-item">
-                                    <img src="./static/assets/images/avatars/avatar-1.png" alt="avatar-1" class="author-img">
+                                    <img src="./static/assets/images/avatars/avatar-1.png" alt="avatar-1"
+                                        class="author-img">
                                     <div class="review-content">
                                         <p class="d-flex mb-0">
-                                            <span class="author-name">徐家福</span> 
-                                            <i class="material-icons text-muted px-1" title="Dissatisfied">sentiment_dissatisfied</i>
+                                            <span class="author-name">徐家福</span>
+                                            <i class="material-icons text-muted px-1"
+                                                title="Dissatisfied">sentiment_dissatisfied</i>
                                         </p>
                                         <p class="text-muted fw-500 mb-2"><small>13 January, 2018 at 7:09</small></p>
                                         <p class="text">不太喜欢</p>
-                                    </div> 
-                                </div> 
+                                    </div>
+                                </div>
                                 <div class="review-item">
-                                    <img src="./static/assets/images/avatars/avatar-2.png" alt="avatar-2" class="author-img">
+                                    <img src="./static/assets/images/avatars/avatar-2.png" alt="avatar-2"
+                                        class="author-img">
                                     <div class="review-content">
                                         <p class="d-flex mb-0">
-                                            <span class="author-name">徐家福1</span> 
-                                            <i class="material-icons text-muted px-1" title="Very Satisfied">sentiment_very_satisfied</i>
+                                            <span class="author-name">徐家福1</span>
+                                            <i class="material-icons text-muted px-1"
+                                                title="Very Satisfied">sentiment_very_satisfied</i>
                                         </p>
                                         <p class="text-muted fw-500 mb-2"><small>04 February, 2018 at 10:22</small></p>
                                         <p class="text">我还行</p>
-                                    </div> 
-                                </div> 
+                                    </div>
+                                </div>
                                 <div class="review-item">
-                                    <img src="./static/assets/images/avatars/avatar-3.png" alt="avatar-3" class="author-img">
+                                    <img src="./static/assets/images/avatars/avatar-3.png" alt="avatar-3"
+                                        class="author-img">
                                     <div class="review-content">
                                         <p class="d-flex mb-0">
-                                            <span class="author-name">徐家福2</span> 
-                                            <i class="material-icons text-muted px-1" title="Neutral">sentiment_neutral</i>
+                                            <span class="author-name">徐家福2</span>
+                                            <i class="material-icons text-muted px-1"
+                                                title="Neutral">sentiment_neutral</i>
                                         </p>
                                         <p class="text-muted fw-500 mb-2"><small>14 February, 2018 at 11:10</small></p>
                                         <p class="text">买不起</p>
-                                    </div> 
-                                </div> 
-                            </div>  
+                                    </div>
+                                </div>
+                            </div>
                             <h3 class="uppercase mt-3">留下你的评论</h3>
                             <div class="row pb-2 p-relative">
                                 <div class="divider"></div>
-                            </div> 
+                            </div>
                             <h3 class="row flex-nowrap middle-xs my-2 text-muted">
-                                <span>你的评论:</span> 
-                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0" title="Very Dissatisfied"> 
+                                <span>你的评论:</span>
+                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0"
+                                    title="Very Dissatisfied">
                                     <span class="material-icons mat-icon-lg">sentiment_very_dissatisfied</span>
-                                </button>  
-                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0" title="Dissatisfied"> 
+                                </button>
+                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0" title="Dissatisfied">
                                     <span class="material-icons mat-icon-lg">sentiment_dissatisfied</span>
-                                </button>  
-                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0" title="Neutral"> 
+                                </button>
+                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0" title="Neutral">
                                     <span class="material-icons mat-icon-lg">sentiment_neutral</span>
-                                </button>  
-                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0" title="Satisfied"> 
+                                </button>
+                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0" title="Satisfied">
                                     <span class="material-icons mat-icon-lg">sentiment_satisfied</span>
-                                </button>  
-                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0" title="Very Satisfied"> 
+                                </button>
+                                <button class="mdc-icon-button d-flex middle-xs center-xs p-0" title="Very Satisfied">
                                     <span class="material-icons mat-icon-lg">sentiment_very_satisfied</span>
-                                </button>  
-                            </h3> 
-                            <form action="javascript:void(0);" class="row comment-form"> 
+                                </button>
+                            </h3>
+                            <form action="javascript:void(0);" class="row comment-form">
                                 <div class="col-xs-12">
-                                    <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea w-100 custom-field my-2">
+                                    <div
+                                        class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea w-100 custom-field my-2">
                                         <textarea class="mdc-text-field__input" rows="5"></textarea>
                                         <div class="mdc-notched-outline mdc-notched-outline--upgraded">
                                             <div class="mdc-notched-outline__leading"></div>
@@ -700,7 +710,7 @@
                                             </div>
                                             <div class="mdc-notched-outline__trailing"></div>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="mdc-text-field mdc-text-field--outlined w-100 custom-field my-2">
@@ -712,7 +722,7 @@
                                             </div>
                                             <div class="mdc-notched-outline__trailing"></div>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="mdc-text-field mdc-text-field--outlined w-100 custom-field my-2">
@@ -724,66 +734,66 @@
                                             </div>
                                             <div class="mdc-notched-outline__trailing"></div>
                                         </div>
-                                    </div> 
-                                </div> 
+                                    </div>
+                                </div>
                                 <div class="col-xs-12 text-center mt-3">
                                     <button class="mdc-button mdc-button--raised" type="button">
-                                        <span class="mdc-button__ripple"></span>
-                                        <span class="mdc-button__label">提交评论</span> 
-                                    </button> 
-                                </div> 
-                            </form>   
-                        </div> 
-                    </div>  
+                                        <span class="mdc-button__label">提交评论</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <aside class="mdc-drawer mdc-drawer--modal page-sidenav">
                         <a href="#" class="h-0"></a>
-                        <div class="mdc-card p-3"> 
-                            <div class="widget">  
+                        <div class="mdc-card p-3">
+                            <div class="widget">
                                 <div class="mdc-card o-hidden">
                                     <a href="agent.html">
-                                        <img src="./static/assets/images/agents/a-4.jpg" alt="agent-4" class="d-block mw-100">
+                                        <img src="./static/assets/images/agents/a-4.jpg" alt="agent-4"
+                                            class="d-block mw-100">
                                     </a>
                                     <div class="p-3">
-                                        <h2 class="fw-600">徐家福大老板</h2> 
-                                        <div class="row start-xs middle-xs ratings" title="15">      
+                                        <h2 class="fw-600">徐家福大老板</h2>
+                                        <div class="row start-xs middle-xs ratings" title="15">
                                             <i class="material-icons mat-icon-sm">star</i>
                                             <i class="material-icons mat-icon-sm">star</i>
                                             <i class="material-icons mat-icon-sm">star</i>
                                             <i class="material-icons mat-icon-sm">star</i>
                                             <i class="material-icons mat-icon-sm">star_half</i>
-                                        </div> 
-                                        <p class="mt-3 text-muted fw-500">家里几千亩地，十几多套房子</p>                                    
-                                        <p class="row middle-xs"><i class="material-icons primary-color" title="Organization">business</i><span class="mx-2 text-muted fw-500">公寓</span></p>
-                                        <p class="row middle-xs"><i class="material-icons primary-color">email</i><span class="mx-2 text-muted fw-500">xujiafu.@qq.com</span></p>
-                                        <p class="row middle-xs"><i class="material-icons primary-color">call</i><span class="mx-2 text-muted fw-500">19970915989</span></p>
+                                        </div>
+                                        <p class="mt-3 text-muted fw-500">家里几千亩地，十几多套房子</p>
+                                        <p class="row middle-xs"><i class="material-icons primary-color"
+                                                title="Organization">business</i><span
+                                                class="mx-2 text-muted fw-500">公寓</span></p>
+                                        <p class="row middle-xs"><i class="material-icons primary-color">email</i><span
+                                                class="mx-2 text-muted fw-500">xujiafu.@qq.com</span></p>
+                                        <p class="row middle-xs"><i class="material-icons primary-color">call</i><span
+                                                class="mx-2 text-muted fw-500">19970915989</span></p>
                                         <div class="row pb-3 p-relative">
                                             <div class="divider"></div>
-                                        </div> 
+                                        </div>
                                         <div class="row between-xs middle-xs">
-                                            
                                             <a href="javascript:void(0);" class="mdc-button">
-                                                <span class="mdc-button__ripple"></span>
                                                 <span class="mdc-button__label">查看详情</span>
                                             </a>
-                                        </div> 
-                                    </div>  
-                                </div>  
-                            </div>  
-                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </aside>
-                    <div class="mdc-drawer-scrim page-sidenav-scrim"></div>  
-                </div> 
-            </div>  
-        </div>  
-        
-    </main> 
-  
-   
+                    <div class="mdc-drawer-scrim page-sidenav-scrim"></div>
+                </div>
+            </div>
+        </div>
+    </main>
     <div id="back-to-top"><i class="material-icons">arrow_upward</i></div>
-    <script src="./static/js/libs/jquery.min.js"></script> 
-    <script src="./static/js/libs/material-components-web.min.js"></script> 
-    <script src="./static/js/libs/swiper.min.js"></script> 
-    <script src="./static/js/scripts.js"></script>  
+    <script src="./static/js/libs/jquery.min.js"></script>
+    <script src="./static/js/libs/material-components-web.min.js"></script>
+    <script src="./static/js/libs/swiper.min.js"></script>
+    <script src="./static/js/scripts.js"></script>
 </body>
+
 </html>
