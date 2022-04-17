@@ -328,7 +328,6 @@
                                         <div>
                                             <a href="http://themeseason.com" target="_blank"
                                                 class="mdc-button mdc-ripple-upgraded">
-
                                                 <span class="mdc-button__label">问题反馈</span>
                                             </a>
                                         </div>
@@ -346,12 +345,10 @@
                         title="对比">compare_arrows</a>
                     <a href="submit-property.html"
                         class="mdc-fab mdc-fab--mini primary d-sm-none d-md-none d-lg-none d-xl-none mdc-ripple-upgraded">
-
                         <span class="mdc-fab__icon material-icons">add</span>
                     </a>
                     <a href="submit-property.html"
                         class="mdc-button mdc-button--raised d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex mdc-ripple-upgraded">
-
                         <span class="mdc-button__label">上架房屋</span>
                     </a>
                 </div>
@@ -362,8 +359,6 @@
     <main>
         <div class="px-3">
             <div class="theme-container">
-
-
                 <h3 class="uppercase mt-3">我的清单</h3>
                 <div class="page-drawer-container mt-3">
                     <aside class="mdc-drawer mdc-drawer--modal page-sidenav">
@@ -371,6 +366,46 @@
                         <div class="mdc-card">
                             <form action="javascript:void(0);" id="filters" class="search-wrapper m-0 o-hidden">
                                 <div class="column p-2">
+                                    <div class="col-xs-12 p-2">
+                                        <div class="mdc-select mdc-select--outlined">
+                                            <div class="mdc-select__anchor">
+                                                <i class="mdc-select__dropdown-icon"></i>
+                                                <div class="mdc-select__selected-text"></div>
+                                                <div class="mdc-notched-outline">
+                                                    <div class="mdc-notched-outline__leading"></div>
+                                                    <div class="mdc-notched-outline__notch">
+                                                        <label class="mdc-floating-label">城市</label>
+                                                    </div>
+                                                    <div class="mdc-notched-outline__trailing"></div>
+                                                </div>
+                                            </div>
+                                            <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+                                                <ul class="mdc-list">
+                                                    <li class="mdc-list-item mdc-list-item--selected" data-value="">
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="1">北京</li>
+                                                    <li class="mdc-list-item" data-value="2">上海</li>
+                                                    <li class="mdc-list-item" data-value="3">江苏</li>
+                                                    <li class="mdc-list-item" data-value="4">南昌</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 p-2">
+                                        <div class="mdc-select mdc-select--outlined">
+                                            <div class="mdc-select__anchor">
+                                                <i class="mdc-select__dropdown-icon"></i>
+                                                <div class="mdc-select__selected-text"></div>
+                                                <div class="mdc-notched-outline">
+                                                    <div class="mdc-notched-outline__leading"></div>
+                                                    <div class="mdc-notched-outline__notch">
+                                                        <label class="mdc-floating-label">详细地址</label>
+                                                    </div>
+                                                    <div class="mdc-notched-outline__trailing"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-xs-12 p-2">
                                         <div class="mdc-select mdc-select--outlined">
                                             <div class="mdc-select__anchor">
@@ -403,7 +438,7 @@
                                                 <div class="mdc-notched-outline">
                                                     <div class="mdc-notched-outline__leading"></div>
                                                     <div class="mdc-notched-outline__notch">
-                                                        <label class="mdc-floating-label">物业状态</label>
+                                                        <label class="mdc-floating-label">房屋状态</label>
                                                     </div>
                                                     <div class="mdc-notched-outline__trailing"></div>
                                                 </div>
@@ -412,16 +447,14 @@
                                                 <ul class="mdc-list">
                                                     <li class="mdc-list-item mdc-list-item--selected" data-value="">
                                                     </li>
-                                                    <li class="mdc-list-item" data-value="1">出售</li>
-                                                    <li class="mdc-list-item" data-value="2">出租</li>
-                                                    <li class="mdc-list-item" data-value="3">开放参观日</li>
-                                                    <li class="mdc-list-item" data-value="4">不收费</li>
-                                                    <li class="mdc-list-item" data-value="5">热卖</li>
-                                                    <li class="mdc-list-item" data-value="6">售出</li>
+                                                    <li class="mdc-list-item" data-value="1">出售中</li>
+                                                    <li class="mdc-list-item" data-value="2">招租中</li>
+                                                    <li class="mdc-list-item" data-value="3">已出售</li>
+                                                    <li class="mdc-list-item" data-value="4">已出租</li>
+                                                    <li class="mdc-list-item" data-value="5">其他</li>
                                                 </ul>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-6 p-2">
@@ -449,31 +482,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-12 p-2">
-                                        <div class="mdc-select mdc-select--outlined">
-                                            <div class="mdc-select__anchor">
-                                                <i class="mdc-select__dropdown-icon"></i>
-                                                <div class="mdc-select__selected-text"></div>
-                                                <div class="mdc-notched-outline">
-                                                    <div class="mdc-notched-outline__leading"></div>
-                                                    <div class="mdc-notched-outline__notch">
-                                                        <label class="mdc-floating-label">城市</label>
-                                                    </div>
-                                                    <div class="mdc-notched-outline__trailing"></div>
-                                                </div>
-                                            </div>
-                                            <div class="mdc-select__menu mdc-menu mdc-menu-surface">
-                                                <ul class="mdc-list">
-                                                    <li class="mdc-list-item mdc-list-item--selected" data-value="">
-                                                    </li>
-                                                    <li class="mdc-list-item" data-value="1">北京</li>
-                                                    <li class="mdc-list-item" data-value="2">上海</li>
-                                                    <li class="mdc-list-item" data-value="3">江苏</li>
-                                                    <li class="mdc-list-item" data-value="4">南昌</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                 
 
                                     <div class="row">
                                         <div class="col-xs-6 p-2">
@@ -548,7 +557,7 @@
                                                     <div class="mdc-notched-outline">
                                                         <div class="mdc-notched-outline__leading"></div>
                                                         <div class="mdc-notched-outline__notch">
-                                                            <label class="mdc-floating-label">浴室从</label>
+                                                            <label class="mdc-floating-label">浴室数量</label>
                                                         </div>
                                                         <div class="mdc-notched-outline__trailing"></div>
                                                     </div>
