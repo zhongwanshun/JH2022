@@ -13,7 +13,9 @@ func LoginHandler(c *gin.Context) {
 	var loginUser db.LoginMessage
 	if err := c.ShouldBind(&loginUser); err == nil { //{ID:1}
 		log.Info.Printf("loginUser:%v\n", loginUser)
+
 		user, err := db.Db_Login(&loginUser) // 注册用户
+
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		}
