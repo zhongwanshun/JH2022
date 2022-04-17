@@ -2,7 +2,7 @@ package handler
 
 import (
 	"demo/db"
-	"fmt"
+	"demo/log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -12,6 +12,7 @@ import (
 func LoginHandler(c *gin.Context) {
 	var loginUser db.LoginMessage
 	if err := c.ShouldBind(&loginUser); err == nil { //{ID:1}
+		log.Info.Printf("loginUser:%v\n", loginUser)
 		user, err := db.Db_Login(&loginUser) // 注册用户
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
@@ -33,11 +34,10 @@ func LoginHandler(c *gin.Context) {
 func AddUsersHandler(c *gin.Context) {
 	var newUser db.User
 	if err := c.ShouldBind(&newUser); err == nil { //{ID:1}
-		fmt.Printf("newUser:%v\n", newUser)
-
+		log.Info.Printf("newUser:%v\n", newUser)
 		err := db.Db_Register(&newUser) // 注册用户
 		if err != nil {
-			fmt.Printf("handler/user.go err:%v\n", err)
+			log.Warning.Printf("handler/user.go err:%v\n", err)
 			c.JSON(http.StatusBadRequest, gin.H{"status": err.Error()})
 		} else {
 			// 成功则重定向到原页面

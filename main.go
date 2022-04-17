@@ -1,31 +1,31 @@
 package main
 
 import (
-	"demo/cfg"
+	c "demo/cfg"
 	"demo/db"
+	"demo/log"
 	"demo/routers"
-	"fmt"
 )
 
-func main() {
+var config *c.ConfigAll
 
-	// 载入配置文件	./cfg.json
-	cfgPath := "./cfg.json"
-	c, err := cfg.LoadConfig(cfgPath)
-	if err != nil {
-		fmt.Printf("载入配置文件错误:%v\n", err)
-		return
-	}
-	fmt.Printf("%#v\n", c)
+func init() {
+	// 载入配置文件
+	config = c.GetConfig()
+
+	// 初始化日志库,设置日志级别
+	log.NewLogger(config.Server.Pwd)
 
 	// 初始化数据库
-	err = db.InitDB(c)
+	mysql := config.Mysql
+	err := db.InitDB(&mysql)
 	if err != nil {
-		fmt.Printf("初始化数据库错误:%v\n", err)
+		log.Error.Printf("初始化数据库错误:%v\n", err)
 		return
 	}
+}
+func main() {
 	// 注册路由
-	router := routers.SetupRouter()
-
-	router.Run(fmt.Sprintf("%s:%s", c.Host, c.Port))
+	server := config.Server
+	routers.SetupRouter(&server)
 }
