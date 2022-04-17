@@ -28,20 +28,16 @@ func SetupRouter(r *c.Server) {
 	// 告诉gin框架去哪里找模板文件
 	router.LoadHTMLGlob("templates/*")
 
-	// 将请求的路径记录到日志中
-	router.Use(func(c *gin.Context) {
-		path := c.Request.URL.Path
-		if path == "/" {
-			path = "/index"
-		}
-		log.Trace.Printf("%s %s\n", c.Request.Method, path)
-		c.Next()
-	})
 	// GET请求路由组
 	getRouter := router.Group("/")
 	{
+		getRouter.GET("/", func(c *gin.Context) {
+			// 重定向到首页
+			c.Redirect(http.StatusMovedPermanently, "/index")
+		})
 		/* index */
 		getRouter.GET("/index", func(c *gin.Context) {
+			log.Trace.Printf("请求的方式: %s ,请求的路径: %s\n", c.Request.Method, c.Request.URL.Path)
 			c.HTML(http.StatusOK, "index.html", gin.H{
 				"method": "GET",
 			})
@@ -70,6 +66,7 @@ func SetupRouter(r *c.Server) {
 
 		getRouter.GET("/:path", func(ctx *gin.Context) {
 			path := ctx.Param("path")
+			log.Trace.Printf("请求的方式: %s ,请求的路径: %s\n", ctx.Request.Method, ctx.Request.URL.Path)
 			if _, OK := p[path]; OK {
 				ctx.HTML(http.StatusOK, path, gin.H{})
 			} else {
