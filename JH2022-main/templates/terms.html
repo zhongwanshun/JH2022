@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>条款与条件</title> 
+    <link rel="icon" type="image/x-icon" href="./static/assets/favicon.ico">
+    <link rel="stylesheet" href="./static/css/Montserrat.css">
+    <link rel="stylesheet" href="./static/css/icon.css">   
+    <link rel="stylesheet" href="./static/css/libs/swiper.min.css">
+    <link rel="stylesheet" href="./static/css/libs/material-components-web.min.css">  
+    <link rel="stylesheet" href="./static/css/style.css"> 
+    <link rel="stylesheet" href="./static/css/skins/blue.css">  
+    <link rel="stylesheet" href="./static/css/responsive.css">  
+</head>
+<body class="mdc-theme--background"> 
+    <div class="spinner-wrapper" id="preloader">
+        <div class="spinner-container">
+            <div class="spinner-outer">
+                <div class="spinner">
+                    <div class="left mask">
+                        <div class="plane"></div>  
+                    </div>            
+                    <div class="top mask">
+                        <div class="plane"></div>
+                    </div>
+                    <div class="right mask">
+                        <div class="plane"></div>  
+                    </div>            
+                    <div class="triangle">
+                        <div class="triangle-plane"></div> 
+                    </div>
+                    <div class="top-left mask">
+                        <div class="plane"></div>
+                    </div>
+                    <div class="top-right mask">
+                        <div class="plane"></div>
+                    </div>            
+                </div>
+                <p class="spinner-text">HouseKey</p> 
+            </div>
+        </div>
+    </div> 
+    <div class="options transition">
+        <button id="options-toggle" class="mdc-button options-icon mdc-elevation--z0"> 
+            <i class="material-icons m-0 palette">palette</i>
+            <i class="material-icons m-0 close">close</i>
+        </button>
+        <div class="mdc-card column between-xs middle-xs">
+            <div class="skin-primary blue" data-name="blue"></div>
+            <div class="skin-primary green" data-name="green"></div>
+            <div class="skin-primary red" data-name="red"></div>
+            <div class="skin-primary pink" data-name="pink"></div>
+            <div class="skin-primary purple" data-name="purple"></div>
+            <div class="skin-primary grey" data-name="grey"></div> 
+            <div class="skin-primary orange-dark" data-name="orange-dark"><div class="skin-secondary"></div></div> 
+        </div> 
+    </div>  
+    <aside class="mdc-drawer mdc-drawer--modal sidenav">
+        <div class="row end-xs middle-xs py-1 px-3">
+            <button id="sidenav-close" class="mdc-icon-button material-icons warn-color">close</button> 
+        </div>
+        <hr class="mdc-list-divider m-0">
+        <div class="mdc-drawer__content"> 
+            <div class="vertical-menu">   
+                <div class="mdc-menu-surface--anchor"> 
+                    <a href="javascript:void(0);" class="mdc-button menu-item-has-children"> 
+                        <span class="mdc-button__ripple"></span> 
+                        <span class="mdc-button__label">首页</span>
+                    </a>  
+                    <div class="mdc-menu mdc-menu-surface">
+                        <div class="mdc-list"> 
+                            <div> 
+                                <a href="header-default.html" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">主页</span> 
+                                </a>  
+                            </div>
+                            <div> 
+                                <a href="index" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">首页</span> 
+                                </a>  
+                            </div>  
+
+                              
+                        </div>
+                    </div>  
+                </div>   
+                <div>
+                    <a href="properties.html" class="mdc-button">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">筛选</span> 
+                    </a> 
+                </div>  
+                <div class="mdc-menu-surface--anchor"> 
+                    <a href="javascript:void(0);" class="mdc-button menu-item-has-children"> 
+                        <span class="mdc-button__ripple"></span> 
+                        <span class="mdc-button__label">更多</span> 
+                    </a>  
+                    <div class="mdc-menu mdc-menu-surface">
+                        <div class="mdc-list"> 
+                            <div> 
+                                <a href="property.html" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">个人财产</span> 
+                                </a>  
+                            </div><div> 
+                                <a href="agents.html" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">代理</span> 
+                                </a>  
+                            </div>
+
+                            <div> 
+                                <a href="login.html" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">登录</span> 
+                                </a>  
+                            </div>
+                            <div> 
+                                <a href="register.html" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">注册</span> 
+                                </a>  
+                            </div>
+                            <div> 
+                                <a href="faqs.html" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">常见问题解答</span> 
+                                </a>  
+                            </div>
+                            <div> 
+                                <a href="pricing.html" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">价钱</span> 
+                                </a>  
+                            </div>
+                            <div> 
+                                <a href="terms.html" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">条款与条件</span> 
+                                </a>  
+                            </div>
+                            <div> 
+                                <a href="index" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">平台</span> 
+                                </a>  
+                            </div>
+                            <div> 
+                                <a href="404.html" class="mdc-button"> 
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">404页面</span> 
+                                </a>  
+                            </div> 
+                             
+                        </div>
+                    </div>  
+                </div> 
+                <div>
+                    <a href="contact.html" class="mdc-button">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">联系</span> 
+                    </a> 
+                </div> 
+                <div>
+                    <a href="about.html" class="mdc-button">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">关于我们</span> 
+                    </a> 
+                </div>  
+            </div>  
+        </div>
+        <hr class="mdc-list-divider m-0">
+        <div class="row center-xs middle-xs py-3">
+            <a href="https://www.facebook.com/" target="blank" class="social-icon">
+                <svg class="material-icons mat-icon-xlg primary-color" viewBox="0 0 24 24">
+                    <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z" />
+                </svg>
+            </a>
+            <a href="https://twitter.com/" target="blank" class="social-icon">
+                <svg class="material-icons mat-icon-xlg primary-color" viewBox="0 0 24 24">
+                    <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.71,9.33C18.19,8.93 18.75,8.45 19,7.92C18.59,8.13 18.1,8.26 17.56,8.33C18.06,7.97 18.47,7.5 18.68,6.86C18.16,7.14 17.63,7.38 16.97,7.5C15.42,5.63 11.71,7.15 12.37,9.95C9.76,9.79 8.17,8.61 6.85,7.16C6.1,8.38 6.75,10.23 7.64,10.74C7.18,10.71 6.83,10.57 6.5,10.41C6.54,11.95 7.39,12.69 8.58,13.09C8.22,13.16 7.82,13.18 7.44,13.12C7.81,14.19 8.58,14.86 9.9,15C9,15.76 7.34,16.29 6,16.08C7.15,16.81 8.46,17.39 10.28,17.31C14.69,17.11 17.64,13.95 17.71,9.33Z" />
+                </svg> 
+            </a>
+            <a href="https://www.linkedin.com/" target="blank" class="social-icon"> 
+                <svg class="material-icons mat-icon-xlg primary-color" viewBox="0 0 24 24">
+                    <path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
+                </svg>
+            </a>
+            <a href="https://plus.google.com/" target="blank" class="social-icon"> 
+                <svg class="material-icons mat-icon-xlg primary-color" viewBox="0 0 24 24">
+                    <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M19.5,12H18V10.5H17V12H15.5V13H17V14.5H18V13H19.5V12M9.65,11.36V12.9H12.22C12.09,13.54 11.45,14.83 9.65,14.83C8.11,14.83 6.89,13.54 6.89,12C6.89,10.46 8.11,9.17 9.65,9.17C10.55,9.17 11.13,9.56 11.45,9.88L12.67,8.72C11.9,7.95 10.87,7.5 9.65,7.5C7.14,7.5 5.15,9.5 5.15,12C5.15,14.5 7.14,16.5 9.65,16.5C12.22,16.5 13.96,14.7 13.96,12.13C13.96,11.81 13.96,11.61 13.89,11.36H9.65Z" />
+                </svg>
+            </a>
+        </div>  
+    </aside>
+    <div class="mdc-drawer-scrim sidenav-scrim"></div>  
+    <header class="toolbar-1">  
+        <div id="top-toolbar" class="mdc-top-app-bar"> 
+            <div class="theme-container row between-xs middle-xs h-100">
+                    <button id="sidenav-toggle" class="mdc-button mdc-ripple-surface d-md-none d-lg-none d-xl-none">
+                        <span class="mdc-button__ripple"></span>
+                        <i class="material-icons">menu</i>
+                    </button>
+                    <div class="mdc-menu-surface--anchor"> 
+                        <button class="mdc-button mdc-ripple-surface"> 
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon mx-1">people</i>
+                            <span class="mdc-button__label">账户</span>
+                            <i class="material-icons mdc-button__icon m-0">sorrow_drop_down</i>
+                        </button> 
+                        <div class="mdc-menu mdc-menu-surface user-menu">
+                            <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                                <li class="user-info row start-xs middle-xs">                   
+                                    <img src="./static/assets/images/others/user.jpg" alt="user-image" width="50">
+                                    <p class="m-0">昵称 <br> <small><i>账号名</i></small></p>
+                                </li>
+                                <li role="separator" class="mdc-list-divider m-0"></li> 
+                                <li>
+                                    <a href="submit-property.html" class="mdc-list-item" role="menuitem">
+                                        <i class="material-icons mat-icon-sm text-muted">add_circle</i> 
+                                        <span class="mdc-list-item__text px-3">上架房屋</span>
+                                    </a> 
+                                </li>
+                                <li>
+                                    <a href="my-properties.html" class="mdc-list-item" role="menuitem">
+                                        <i class="material-icons mat-icon-sm text-muted">home</i>
+                                        <span class="mdc-list-item__text px-3">我的财产</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="favorites.html" class="mdc-list-item" role="menuitem">
+                                        <i class="material-icons mat-icon-sm text-muted">favorite_border</i> 
+                                        <span class="mdc-list-item__text px-3">我的喜爱
+                                            <span class="badge warn">2</span>
+                                        </span> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="compare.html" class="mdc-list-item" role="menuitem">
+                                        <i class="material-icons mat-icon-sm text-muted">compare_arrows</i> 
+                                        <span class="mdc-list-item__text px-3">对比
+                                            <span class="badge primary">3</span>
+                                        </span> 
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" class="mdc-list-item" role="menuitem">
+                                        <i class="material-icons mat-icon-sm text-muted">search</i> 
+                                        <span class="mdc-list-item__text px-3">保存搜索</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="profile.html" class="mdc-list-item" role="menuitem">
+                                        <i class="material-icons mat-icon-sm text-muted">edit</i> 
+                                        <span class="mdc-list-item__text px-3">编辑配置文件</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="lock-screen.html" class="mdc-list-item" role="menuitem">
+                                        <i class="material-icons mat-icon-sm text-muted">lock</i> 
+                                        <span class="mdc-list-item__text px-3">锁定屏幕</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faqs.html" class="mdc-list-item" role="menuitem">
+                                        <i class="material-icons mat-icon-sm text-muted">help</i> 
+                                        <span class="mdc-list-item__text px-3">帮助</span>
+                                    </a>
+                                </li>
+                                <li role="separator" class="mdc-list-divider m-0"></li>
+                                <li>
+                                    <a href="login.html" class="mdc-list-item" role="menuitem">
+                                        <i class="material-icons mat-icon-sm text-muted">power_settings_new</i> 
+                                        <span class="mdc-list-item__text px-3">退出登录</span>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>  
+        <div id="main-toolbar" class="mdc-elevation--z2">
+            <div class="theme-container row between-xs middle-xs h-100"> 
+                <a class="logo" href="index"> 
+                    <image src="./static/assets/images/others/logo.png" style="width: 60px; height: 60px;"></image>          
+                </a>  
+                <div class="horizontal-menu d-none d-md-flex d-lg-flex d-xl-flex">   
+                    <div class="mdc-menu-surface--anchor"> 
+                        <a href="javascript:void(0);" class="mdc-button menu-item-has-children"> 
+                            <span class="mdc-button__ripple"></span> 
+                            <span class="mdc-button__label">首页</span>
+                        </a>  
+                        <div class="mdc-menu mdc-menu-surface">
+                            <div class="mdc-list"> 
+                                <div> 
+                                    <a href="header-default.html" class="mdc-button"> 
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">主页</span> 
+                                    </a>  
+                                </div>
+                                <div> 
+                                    <a href="index" class="mdc-button"> 
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">首页</span> 
+                                    </a>  
+                                </div>  
+
+                                 
+                            </div>
+                        </div>  
+                    </div>   
+                    <div>
+                        <a href="properties.html" class="mdc-button">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__label">筛选</span> 
+                        </a> 
+                    </div>  
+                    <div class="mdc-menu-surface--anchor"> 
+                        <a href="javascript:void(0);" class="mdc-button menu-item-has-children"> 
+                            <span class="mdc-button__ripple"></span> 
+                            <span class="mdc-button__label">更多</span> 
+                        </a>  
+                        <div class="mdc-menu mdc-menu-surface">
+                            <div class="mdc-list"> 
+                                <div> 
+                                    <a href="property.html" class="mdc-button"> 
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">个人财产</span> 
+                                    </a>  
+                                </div><div> 
+                                    <a href="agents.html" class="mdc-button"> 
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">代理</span> 
+                                    </a>  
+                                </div>
+                                
+                                <div> 
+                                    <a href="login.html" class="mdc-button"> 
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">登录</span> 
+                                    </a>  
+                                </div>
+                                <div> 
+                                    <a href="register.html" class="mdc-button"> 
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">注册</span> 
+                                    </a>  
+                                </div>
+                                <div> 
+                                    <a href="faqs.html" class="mdc-button"> 
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">常见问题解答</span> 
+                                    </a>  
+                                </div>
+ 
+                                <div> 
+                                    <a href="terms.html" class="mdc-button"> 
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">条款与条件</span> 
+                                    </a>  
+                                </div>
+                                <div> 
+                                    <a href="index" class="mdc-button"> 
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">平台</span> 
+                                    </a>  
+                                </div>
+                                
+                                 
+                            </div>
+                        </div>  
+                    </div>  
+                    <div>
+                        <a href="contact.html" class="mdc-button">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__label">联系</span> 
+                        </a> 
+                    </div> 
+                    <div>
+                        <a href="about.html" class="mdc-button">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__label">关于我们</span> 
+                        </a> 
+                    </div>  
+                </div> 
+                <div class="row middle-xs"> 
+                    <a href="favorites.html" class="mdc-icon-button material-icons d-none d-lg-flex d-xl-flex" title="Favorites">favorite_border</a> 
+                    <a href="compare.html" class="mdc-icon-button material-icons d-none d-lg-flex d-xl-flex mr-3 ml-2" title="Compare list">compare_arrows</a>  
+                    <a href="submit-property.html" class="mdc-fab mdc-fab--mini primary d-sm-none d-md-none d-lg-none d-xl-none">
+                        <span class="mdc-fab__ripple"></span>
+                        <span class="mdc-fab__icon material-icons">add</span>
+                    </a>  
+                    <a href="submit-property.html" class="mdc-button mdc-button--raised d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">上架房屋</span> 
+                    </a> 
+                </div>  
+            </div>
+        </div> 
+    </header>    
+    <main>   
+        <div class="px-3">  
+            <div class="theme-container">  
+                <div class="my-5">
+                    <div class="column center-xs middle-xs text-center">  
+                      <h1 class="uppercase">条款和条件</h1>             
+                      <p class="text-muted fw-500">使用本软件即视为您已阅读并同意以下条款：</p>
+                    </div> 
+                    <div class="mdc-card p-5 my-3">
+                        <p> 以下术语适用于这些条款和条件、隐私声明和免责声明以及任何或所有协议：“客户”、“您”和“您的”是指您，即访问本软件并接受条款和条件的人。“公司”、“我们自己”、“我们”和“我们”是指我们的公司。“一方”、“各方”或“我们”是指客户和我们自己，或客户或我们自己。所有条款均指以最适当的方式（无论是通过固定期限的正式会议还是任何其他方式）向客户提供协助所必需的要约、接受和考虑付款，根据并受现行中国法律的约束，明确满足客户在提供公司规定的服务/产品方面的需求。以单数、复数、大写形式和/或 he/she or they 对上述术语或其他词语的任何使用均视为可互换，因此指代相同。</p>
+              
+                          <h3>隐私声明</h3>
+                          <p>我们致力于保护您的隐私。公司内的授权员工在需要了解的基础上仅使用从个人客户那里收集的任何信息。我们不断审查我们的系统和数据，以确保为我们的客户提供最好的服务。议会已针对针对计算机系统和数据的未经授权的行为制定了具体的罪行。我们将调查任何此类行为，以起诉和/或提起民事诉讼，以追回对责任人的损害 </p>
+              
+                          <h3>免责声明、排除和限制</h3>
+              
+                          <p>本软件上的信息是按“原样”提供的。在法律允许的最大范围内，本公司：
+
+                        </p>
+                          <ul class="px-3">
+                            <li>不包括与本软件及其内容或任何关联公司或任何其他第三方提供或可能提供的所有陈述和保证，包括与本软件文献中的任何不准确或遗漏有关的陈述和保证；和</li>
+                            <li>不承担因您使用软件站或与您使用本软件有关的任何损害赔偿责任。这包括但不限于直接损失、业务或利润损失（无论此类利润损失是否可预见、是否在正常情况下发生或您已告知本公司此类潜在损失的可能性）、造成的损害对您的计算机、计算机软件、系统和程序及其上的数据或任何其他直接或间接、后果性和偶然性损害。</li>    
+                          </ul>
+                          <p>但是，本公司不排除因疏忽造成的死亡或人身伤害的责任。上述排除和限制仅在法律允许的范围内适用。您作为消费者的任何法定权利均不受影响。</p>
+              
+                          <h3>取消政策 </h3>
+                          <p>需要至少提前 24 小时通知取消。例如，通过电子邮件、手机“短信”和/或传真或任何其他方式的通知将被接受，但须以书面形式确认。我们保留收取 30 中元费用以支付任何后续管理费用的权利。</p>
+                          
+                          <h3>协议终止和退款政策</h3>
+                          <p>客户和我们都有权以任何理由终止任何服务协议，包括终止已经进行的服务。如果服务被视为已经开始并且出于所有意图和目的正在进行中，则不提供退款。任何已支付给我们的款项构成对提供未使用服务的付款，应予以退还。</p>
+              
+                          <h3>可用性</h3>
+                          <p>除非另有说明，否则本软件上的服务仅在中国境内可用，或与来自中国的帖子相关。所有广告仅针对中国市场。您全权负责评估通过本软件提供的任何下载、程序和文本是否适合特定目的。未经本公司明确书面同意，禁止重新分发或重新发布本软件的任何部分或其内容，包括通过框架或其他类似或任何其他方式。本公司不保证本软件的服务不会中断、及时或没有错误，虽然它是提供给最好的能力。通过使用此服务，您将赔偿本公司、其员工、代理和关联公司，使其免受以任何方式造成的任何损失或损害。</p>
+              
+                          <h3>版权声明</h3>
+                          <p>与本公司服务相关的所有文本和本软件的全部内容均存在版权和其他相关知识产权。本公司的标志是本公司在中国和其他国家的注册商标。本软件上展示的本公司的品牌名称和特定服务均带有商标。 </p>
+              
+                          <h3> 不可抗力 </h3>
+                          <p>对于因一方无法控制的事件（包括但不限于任何天灾、恐怖主义、战争、政治叛乱、起义、骚乱）而未能履行任何协议项下的任何义务，任何一方均不对另一方承担责任, 内乱, 民事或军事当局的行为, 起义, 地震, 洪水或任何其他我们无法控制的自然或人为事件, 导致签订的协议或合同终止, 也无法合理预见。受此类事件影响的任何一方应立即通知另一方，并应尽一切合理努力遵守此处包含的任何协议的条款和条件。</p>
+              
+                          <h3>变更通知 </h3>
+                          <p>公司保留在其认为合适的情况下不时更改这些条件的权利，您继续使用本软件将表示您接受对这些条款的任何调整。如果我们的隐私政策有任何更改，我们将在我们的主页和我们软件的其他关键页面上公布这些更改。如果我们使用软件客户的个人身份信息的方式发生任何变化，将通过电子邮件或邮寄方式通知受此变化影响的人。我们的隐私政策的任何更改将在这些更改发生前 30 天发布在我们的软件上。因此，建议您定期重新阅读本声明 </p>
+              
+                          <h3>这些条款和条件构成客户与我们之间协议的一部分。您访问本软件和/或承诺预订或协议表明您理解、同意和接受免责声明以及此处包含的完整条款和条件。您的法定消费者权利不受影响。</h3>
+              
+                          <p class="text-right">软件版权所有</p>
+                    </div> 
+                </div> 
+            </div>  
+        </div> 
+    </main> 
+    
+    <div id="back-to-top"><i class="material-icons">arrow_upward</i></div>
+    <script src="./static/js/libs/jquery.min.js"></script> 
+    <script src="./static/js/libs/material-components-web.min.js"></script> 
+    <script src="./static/js/libs/swiper.min.js"></script> 
+    <script src="./static/js/scripts.js"></script>  
+</body>
+</html>
